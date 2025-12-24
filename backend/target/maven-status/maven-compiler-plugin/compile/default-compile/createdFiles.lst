@@ -1,0 +1,8 @@
+com\eventscheduler\model\ScheduleResponse.class
+com\eventscheduler\MainApplication.class
+com\eventscheduler\service\EventService.class
+com\eventscheduler\model\Event.class
+com\eventscheduler\controller\EventController.class
+com\eventscheduler\model\Conflict.class
+com\eventscheduler\model\EventRequest.class
+com\eventscheduler\model\EventResponse.class

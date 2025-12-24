@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Event Scheduler</h1>
+        <p class="subtitle">Plan your events and detect conflicts</p>
+    </header>
+
+    <div class="working-hours-section">
+        <h2>Working Hours</h2>
+        <div class="working-hours-inputs">
+            <div class="input-group">
+                <input id="workStart" type="text" placeholder="Work Start HH:MM" value="09:00" autocomplete="off">
+            </div>
+            <div class="input-group">
+                <input id="workEnd" type="text" placeholder="Work End HH:MM" value="17:00" autocomplete="off">
+            </div>
+            <button class="btn btn-working" onclick="setWorkingHours()">Set Working Hours</button>
+        </div>
+        <p class="working-hours-display" id="workingHoursDisplay">Working Hours: 09:00 - 17:00</p>
+    </div>
+
+    <div class="input-section">
+        <div class="input-group">
+            <input id="name" type="text" placeholder="Event Name" autocomplete="off">
+        </div>
+        <div class="input-group">
+            <input id="start" type="text" placeholder="Start HH:MM" autocomplete="off">
+        </div>
+        <div class="input-group">
+            <input id="end" type="text" placeholder="End HH:MM" autocomplete="off">
+        </div>
+        <div class="button-group">
+            <button class="btn btn-primary" onclick="addEvent()">Add Event</button>
+            <button class="btn btn-secondary" onclick="sendEvents()">Schedule</button>
+        </div>
+    </div>
+
+    <div class="events-section">
+        <h2>Your Events</h2>
+        <ul id="eventsList"></ul>
+    </div>
+
+    <div id="conflicts"></div>
+
+    <div class="canvas-section">
+        <h2>Schedule Visualization</h2>
+        <canvas id="scheduleCanvas"></canvas>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
